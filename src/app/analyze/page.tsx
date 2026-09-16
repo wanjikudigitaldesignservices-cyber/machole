@@ -13,7 +13,7 @@ import { useAppStore } from '@/store/useAppStore';
 import type { Frame } from '@/lib/mockData';
 import Link from 'next/link';
 
-export default function AnalyzePage() {
+function AnalyzeContent() {
   const searchParams = useSearchParams();
   const isDemo = searchParams.get('demo') === 'true';
 
@@ -353,5 +353,13 @@ function TryOnOverlay({ imageElement, landmarks, frame }: { imageElement: HTMLIm
         />
       </div>
     </div>
+  );
+}
+
+export default function AnalyzePage() {
+  return (
+    <React.Suspense fallback={<div className="min-h-screen bg-background flex items-center justify-center text-muted-foreground font-light tracking-widest uppercase">Loading Analysis...</div>}>
+      <AnalyzeContent />
+    </React.Suspense>
   );
 }
