@@ -3,7 +3,7 @@
 
 import React, { useState, useRef, useEffect } from 'react';
 import { useSearchParams } from 'next/navigation';
-import { Button } from '@/components/ui/button';
+import { Button, buttonVariants } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { ScanFace, Upload, Camera, AlertCircle, ArrowLeft, Bookmark } from 'lucide-react';
 import { initFaceLandmarker, extractFaceMetrics, classifyFaceShape } from '@/lib/faceAnalysis';
@@ -223,9 +223,9 @@ export default function AnalyzePage() {
 
                 <div className="flex items-center justify-between mt-4">
                   <h3 className="text-lg font-bold tracking-tight">Recommended Frames</h3>
-                  <Button variant="link" className="text-primary p-0 h-auto" asChild>
-                    <Link href="/shortlist">View Shortlist ({savedFrames.length})</Link>
-                  </Button>
+                  <Link href="/shortlist" className={buttonVariants({ variant: "link", className: "text-primary p-0 h-auto" })}>
+                    View Shortlist ({savedFrames.length})
+                  </Link>
                 </div>
 
                 <div className="flex-1 overflow-y-auto flex flex-col gap-4 pr-2 pb-20 custom-scrollbar">
