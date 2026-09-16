@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { buttonVariants } from '@/components/ui/button';
-import { ArrowRight, ScanFace, Glasses, ShoppingBag } from 'lucide-react';
+import { ArrowRight, ScanFace, Glasses, ShoppingBag, Sparkles } from 'lucide-react';
 
 export default function Home() {
   return (
