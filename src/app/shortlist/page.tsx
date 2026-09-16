@@ -3,7 +3,7 @@
 import React, { useRef } from 'react';
 import Link from 'next/link';
 import { ArrowLeft, Printer, HelpCircle, AlertCircle } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { Button, buttonVariants } from '@/components/ui/button';
 import { useAppStore } from '@/store/useAppStore';
 import type { Frame } from '@/lib/mockData';
 
@@ -21,9 +21,9 @@ export default function ShortlistPage() {
         <AlertCircle className="w-16 h-16 text-muted-foreground mb-4" />
         <h2 className="text-3xl font-black mb-4">No frames saved yet</h2>
         <p className="text-muted-foreground mb-8">Go back to the analysis and save some frames to your shortlist.</p>
-        <Button asChild size="lg">
-          <Link href="/analyze">Back to Analysis</Link>
-        </Button>
+        <Link href="/analyze" className={buttonVariants({ size: "lg" })}>
+          Scan My Face
+        </Link>
       </main>
     );
   }

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Button } from '@/components/ui/button';
+import { buttonVariants } from '@/components/ui/button';
 import { ArrowRight, ScanFace, Glasses, ShoppingBag } from 'lucide-react';
 
 export default function Home() {
@@ -14,12 +14,12 @@ export default function Home() {
           <Link href="/for-stores" className="hover:text-foreground transition-colors">Optical Stores</Link>
         </div>
         <div className="flex gap-4">
-          <Button variant="outline" className="hidden sm:flex border-border/50 bg-background/50 backdrop-blur-md" asChild>
-            <Link href="/analyze?demo=true">Try Demo</Link>
-          </Button>
-          <Button asChild className="rounded-full px-6 font-semibold shadow-[0_0_20px_rgba(255,255,255,0.1)]">
-            <Link href="/analyze">Analyze My Face</Link>
-          </Button>
+          <Link href="/analyze?demo=true" className={buttonVariants({ variant: "outline", className: "hidden sm:flex border-border/50 bg-background/50 backdrop-blur-md" })}>
+            Try Demo
+          </Link>
+          <Link href="/analyze" className={buttonVariants({ className: "rounded-full px-6 font-semibold shadow-[0_0_20px_rgba(255,255,255,0.1)]" })}>
+            Analyze My Face
+          </Link>
         </div>
       </nav>
 
@@ -38,17 +38,13 @@ export default function Home() {
             Scan your face, discover your best frame shapes, and virtually try them on before you buy.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 mt-8 w-full sm:w-auto">
-            <Button size="lg" className="rounded-full px-8 text-base h-14 group shadow-lg" asChild>
-              <Link href="/analyze">
-                Analyze My Face
-                <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </Button>
-            <Button size="lg" variant="secondary" className="rounded-full px-8 text-base h-14" asChild>
-              <Link href="#explore">
-                Explore Frames
-              </Link>
-            </Button>
+            <Link href="/analyze" className={buttonVariants({ size: "lg", className: "rounded-full px-8 text-base h-14 group shadow-lg" })}>
+              Start Face Scan
+              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <Link href="/analyze?demo=true" className={buttonVariants({ size: "lg", variant: "secondary", className: "rounded-full px-8 text-base h-14" })}>
+              Try with Demo Photo
+            </Link>
           </div>
         </div>
 
