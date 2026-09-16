@@ -119,9 +119,16 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="w-full border-t border-border/50 py-12 text-center text-sm text-muted-foreground font-light">
-        <p>&copy; {new Date().getFullYear()} FRAMEIQ. All rights reserved.</p>
-        <p className="mt-2 text-xs">Know Your Frame. Before You Buy.</p>
+      <footer className="w-full border-t border-border/50 py-12 flex flex-col items-center justify-center text-sm text-muted-foreground font-light gap-4">
+        <div className="flex gap-6">
+          <Link href="/privacy" className="hover:text-foreground transition-colors">Privacy Policy</Link>
+          <Link href="/cookies" className="hover:text-foreground transition-colors">Cookies Policy</Link>
+          <Link href="/terms" className="hover:text-foreground transition-colors">Terms & Conditions</Link>
+        </div>
+        <div className="text-center">
+          <p>&copy; {new Date().getFullYear()} FRAMEIQ. All rights reserved.</p>
+          <p className="mt-2 text-xs">Know Your Frame. Before You Buy.</p>
+        </div>
       </footer>
     </main>
   );
