@@ -16,7 +16,7 @@ export default function PrivacyPolicy() {
           <p>At FRAMEIQ, we take your privacy seriously. This policy explains how we handle your data, particularly your biometric and facial data used during the virtual try-on experience.</p>
           
           <h2>2. Facial Data & Images</h2>
-          <p>When you use the "Analyze My Face" feature, the facial landmark analysis is performed <strong>locally on your device</strong> using browser-based computer vision models. Your photos are not uploaded to our servers unless you explicitly choose to create an account and save your profile.</p>
+          <p>When you use the &quot;Analyze My Face&quot; feature, the facial landmark analysis is performed <strong>locally on your device</strong> using browser-based computer vision models. Your photos are not uploaded to our servers unless you explicitly choose to create an account and save your profile.</p>
           
           <h2>3. Data Storage</h2>
           <p>If you create an account to save your shortlist, we securely store your email, encrypted password, and the metadata of your eyewear profile (e.g., face shape, recommended frame widths). You can delete your account and all associated data at any time from your account settings.</p>

@@ -25,7 +25,7 @@ export default function TermsAndConditions() {
           <p>You retain all rights to the photos you upload. By uploading a photo for analysis, you grant FRAMEIQ a temporary license to process the image solely for the purpose of providing the virtual try-on and recommendation features.</p>
           
           <h2>5. Limitation of Liability</h2>
-          <p>FRAMEIQ is provided "as is" without any warranties. We shall not be liable for any direct, indirect, incidental, or consequential damages resulting from the use or inability to use the service, including the purchase of ill-fitting physical eyewear based on our virtual try-on.</p>
+          <p>FRAMEIQ is provided &quot;as is&quot; without any warranties. We shall not be liable for any direct, indirect, incidental, or consequential damages resulting from the use or inability to use the service, including the purchase of ill-fitting physical eyewear based on our virtual try-on.</p>
         </div>
       </div>
     </main>
